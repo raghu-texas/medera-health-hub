@@ -1,24 +1,29 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, Briefcase, FileText, Package, Mail } from "lucide-react";
 import logo from "@/assets/oms-logo1.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [{
     name: "Home",
-    href: "#home"
+    href: "#home",
+    icon: Home
   }, {
     name: "Services",
-    href: "#services"
+    href: "#services",
+    icon: Briefcase
   }, {
     name: "Case Studies",
-    href: "#case-studies"
+    href: "#case-studies",
+    icon: FileText
   }, {
     name: "Products",
-    href: "#products"
+    href: "#products",
+    icon: Package
   }, {
     name: "Contact",
-    href: "#contact"
+    href: "#contact",
+    icon: Mail
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,9 +36,15 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navItems.map(item => <a key={item.name} href={item.href} className="text-foreground/80 hover:text-primary transition-colors font-medium">
-                {item.name}
-              </a>)}
+            {navItems.map(item => {
+              const Icon = item.icon;
+              return (
+                <a key={item.name} href={item.href} className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors font-medium">
+                  <Icon size={18} />
+                  {item.name}
+                </a>
+              );
+            })}
             <Button variant="default" size="lg" className="ml-4">
               Get Started
             </Button>
@@ -48,9 +59,15 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && <nav className="md:hidden py-6 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-4">
-              {navItems.map(item => <a key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors font-medium py-2">
-                  {item.name}
-                </a>)}
+              {navItems.map(item => {
+                const Icon = item.icon;
+                return (
+                  <a key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors font-medium py-2">
+                    <Icon size={18} />
+                    {item.name}
+                  </a>
+                );
+              })}
               <Button variant="default" size="lg" className="mt-2">
                 Get Started
               </Button>
