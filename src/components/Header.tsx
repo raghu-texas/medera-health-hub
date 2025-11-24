@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/oms-logo.png";
+import logo from "@/assets/oms-logo1.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [{
@@ -25,7 +25,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 transition-opacity hover:opacity-80">
-            <img src={logo} alt="Medera Logo" className="h-12 w-12" />
+            <img src={logo} alt="OMS Logo" className="h-10 w-auto object-contain" />
             
           </a>
 
