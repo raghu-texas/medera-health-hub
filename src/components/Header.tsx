@@ -46,7 +46,7 @@ const Header = () => {
               );
             })}
             <Button variant="default" size="lg" className="ml-4">
-              Get Started
+              Login
             </Button>
           </nav>
 
@@ -69,7 +69,7 @@ const Header = () => {
                 );
               })}
               <Button variant="default" size="lg" className="mt-2">
-                Get Started
+                Login
               </Button>
             </div>
           </nav>}
