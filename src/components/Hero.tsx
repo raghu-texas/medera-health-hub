@@ -33,20 +33,7 @@ const Hero = () => {
           </p>
 
           {/* Features */}
-          <div className="flex flex-wrap gap-6 mb-10 animate-fade-in">
-            <div className="flex items-center gap-2 text-foreground">
-              <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Heart className="text-primary" size={20} />
-              </div>
-              <span className="font-medium">Patient-Centered Care</span>
-            </div>
-            <div className="flex items-center gap-2 text-foreground">
-              <div className="h-10 w-10 rounded-full bg-secondary/10 flex items-center justify-center">
-                <Shield className="text-secondary" size={20} />
-              </div>
-              <span className="font-medium">Trusted Hospitals</span>
-            </div>
-          </div>
+          
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 animate-fade-in">
