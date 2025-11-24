@@ -1,17 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Shield, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-healthcare.jpg";
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+  return <section id="home" className="relative min-h-screen flex items-center pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Healthcare Technology"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Healthcare Technology" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/98 via-background/95 to-background/90" />
       </div>
 
@@ -60,14 +54,10 @@ const Hero = () => {
               Explore Services
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </Button>
-            <Button size="lg" variant="outline" className="text-base">
-              Contact Us
-            </Button>
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
