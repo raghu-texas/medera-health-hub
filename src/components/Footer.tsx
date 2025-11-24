@@ -1,5 +1,5 @@
 import { Mail, Phone, Clock, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import logo from "@/assets/medera-logo.png";
+import logo from "@/assets/oms-logo1.png";
 
 const Footer = () => {
   const services = [
@@ -17,12 +17,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* About Us */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="Medera Logo" className="h-10 w-10" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Medera
-              </span>
-            </div>
+          <div className="flex items-center gap-3 mb-4">
+            <img src={logo} alt="OMS Logo" className="h-10 w-auto object-contain" />
+          </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Medera is your trusted partner in healthcare, connecting patients with world-class hospitals 
               and advanced medical treatments. We're committed to making quality healthcare accessible to everyone.
