@@ -1,31 +1,37 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Activity, Brain, HeartPulse, Stethoscope } from "lucide-react";
+import { Briefcase, Users, FileText, Scan, UserCircle, CreditCard } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Stethoscope,
-      title: "Patient Health Information",
-      description: "Comprehensive health records management with secure access to your complete medical history, test results, and treatment plans.",
-      color: "primary",
+      icon: Briefcase,
+      title: "Practice Manager",
+      description: "Streamline your medical practice operations with comprehensive management tools for scheduling, billing, and administrative tasks.",
     },
     {
-      icon: HeartPulse,
-      title: "Best Hospitals Network",
-      description: "Connect with top-tier hospitals offering world-class facilities, experienced specialists, and state-of-the-art medical equipment.",
-      color: "secondary",
+      icon: Users,
+      title: "Human Resource",
+      description: "Efficient HR solutions for healthcare facilities including staff management, training coordination, and compliance tracking.",
     },
     {
-      icon: Brain,
-      title: "Advanced Treatments",
-      description: "Access cutting-edge treatment options for critical diseases using the latest medical technology and innovative therapeutic approaches.",
-      color: "accent",
+      icon: FileText,
+      title: "Consent Forms",
+      description: "Digital consent management system ensuring secure, compliant documentation for all medical procedures and treatments.",
     },
     {
-      icon: Activity,
-      title: "Health Monitoring",
-      description: "Real-time health tracking and monitoring services to keep you informed about your wellness journey and vital health metrics.",
-      color: "primary",
+      icon: Scan,
+      title: "Scan Application",
+      description: "Advanced medical imaging and scanning solutions with integrated AI analysis for accurate diagnostic results.",
+    },
+    {
+      icon: UserCircle,
+      title: "Patient Portal",
+      description: "Secure online portal for patients to access health records, test results, appointments, and communicate with providers.",
+    },
+    {
+      icon: CreditCard,
+      title: "Account Payable",
+      description: "Automated financial management system for handling payments, invoicing, and maintaining transparent billing records.",
     },
   ];
 
@@ -46,28 +52,23 @@ const Services = () => {
         </div>
 
         {/* Service Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((service, index) => {
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => {
             const Icon = service.icon;
-            const iconColorClass = service.color === 'primary' ? 'text-primary' : 
-                                    service.color === 'secondary' ? 'text-secondary' : 
-                                    'text-accent';
-            const bgColorClass = service.color === 'primary' ? 'bg-primary/10' : 
-                                  service.color === 'secondary' ? 'bg-secondary/10' : 
-                                  'bg-accent/10';
             return (
               <Card
                 key={index}
                 className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50"
+                style={{ backgroundColor: '#002868' }}
               >
                 <CardHeader>
-                  <div className={`h-14 w-14 rounded-xl ${bgColorClass} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <Icon className={iconColorClass} size={28} />
+                  <div className="h-14 w-14 rounded-xl bg-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon className="text-primary" size={28} />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl text-white">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed">
+                  <CardDescription className="text-base leading-relaxed text-white/90">
                     {service.description}
                   </CardDescription>
                 </CardContent>

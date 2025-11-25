@@ -45,9 +45,14 @@ const Header = () => {
                 </a>
               );
             })}
-            <Button variant="default" size="lg" className="ml-4">
-              Login
-            </Button>
+            <div className="flex items-center gap-3 ml-4">
+              <Button variant="outline" size="lg">
+                Login
+              </Button>
+              <Button variant="default" size="lg">
+                Get Started
+              </Button>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -68,9 +73,14 @@ const Header = () => {
                   </a>
                 );
               })}
-              <Button variant="default" size="lg" className="mt-2">
-                Login
-              </Button>
+              <div className="flex flex-col gap-3 mt-2">
+                <Button variant="outline" size="lg">
+                  Login
+                </Button>
+                <Button variant="default" size="lg">
+                  Get Started
+                </Button>
+              </div>
             </div>
           </nav>}
       </div>
