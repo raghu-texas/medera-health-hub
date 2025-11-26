@@ -75,14 +75,12 @@ const Solutions = () => {
               className="grid lg:grid-cols-2 gap-12 items-center"
             >
               {/* Image */}
-              <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} animate-fade-in`}>
-                <Card className="overflow-hidden border-none shadow-card hover:shadow-soft transition-all duration-300">
-                  <img
-                    src={solution.image}
-                    alt={solution.title}
-                    className="w-full h-[500px] object-cover"
-                  />
-                </Card>
+              <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} animate-fade-in overflow-hidden rounded-2xl shadow-2xl`}>
+                <img
+                  src={solution.image}
+                  alt={solution.title}
+                  className="w-full h-[500px] object-cover hover:scale-110 transition-transform duration-700 ease-out"
+                />
               </div>
 
               {/* Content */}

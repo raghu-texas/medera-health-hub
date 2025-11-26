@@ -2,29 +2,43 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import heroSlide1 from "@/assets/hero-slide-1.jpg";
-import heroSlide2 from "@/assets/hero-slide-2.jpg";
-import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import dentalHero1 from "@/assets/dental-hero-1.jpg";
+import dentalHero2 from "@/assets/dental-hero-2.jpg";
+import dentalHero3 from "@/assets/dental-hero-3.jpg";
+import dentalHero4 from "@/assets/dental-hero-4.jpg";
+import dentalHero5 from "@/assets/dental-hero-5.jpg";
 
 const Hero = () => {
   const slides = [
     {
-      image: heroSlide1,
-      title: "AI-Powered Diagnostics",
-      subtitle: "Revolutionizing Healthcare",
-      description: "Experience cutting-edge AI technology that enables faster, more accurate diagnoses for better patient outcomes.",
+      image: dentalHero1,
+      title: "AI-Powered Dental Diagnostics",
+      subtitle: "Revolutionizing Dental Care",
+      description: "Experience cutting-edge AI technology that enables faster, more accurate dental diagnoses for better patient outcomes and treatment planning.",
     },
     {
-      image: heroSlide2,
-      title: "Telemedicine Excellence",
-      subtitle: "Healthcare at Your Fingertips",
-      description: "Connect with world-class specialists from anywhere, ensuring continuous care and expert medical guidance.",
+      image: dentalHero2,
+      title: "Advanced Dental Technology",
+      subtitle: "Future of Digital Dentistry",
+      description: "State-of-the-art 3D imaging and digital x-ray systems delivering precision diagnostics and comprehensive treatment visualization.",
     },
     {
-      image: heroSlide3,
-      title: "Advanced Surgical Solutions",
+      image: dentalHero3,
+      title: "Collaborative Dental Teams",
+      subtitle: "Excellence Through Teamwork",
+      description: "Expert dental professionals working together with integrated digital workflows to provide comprehensive, coordinated care.",
+    },
+    {
+      image: dentalHero4,
+      title: "Teledentistry Services",
+      subtitle: "Dental Care Anywhere",
+      description: "Connect with experienced dental specialists remotely for consultations, follow-ups, and expert guidance from the comfort of your home.",
+    },
+    {
+      image: dentalHero5,
+      title: "Robotic-Assisted Dental Surgery",
       subtitle: "Precision & Innovation",
-      description: "Robotic-assisted procedures delivering unmatched precision and faster recovery for complex surgeries.",
+      description: "Advanced robotic technology delivering unmatched precision in complex dental procedures with faster recovery and optimal results.",
     },
   ];
 
@@ -53,7 +67,7 @@ const Hero = () => {
                     alt={slide.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/50 to-transparent" />
                 </div>
 
                 {/* Content */}
