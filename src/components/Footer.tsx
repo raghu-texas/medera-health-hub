@@ -1,5 +1,5 @@
 import { Mail, Phone, Clock, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import logo from "@/assets/oms-logo1.png";
+import logo from "@/assets/oms-logo3.png";
 
 const Footer = () => {
   const services = [
@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer id="contact" className="bg-muted/50 border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="container mx-auto p-3">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* About Us */}
           <div>

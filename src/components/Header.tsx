@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Home, Briefcase, FileText, Package, Mail } from "lucide-react";
-import logo from "@/assets/oms-logo1.png";
+import logo from "@/assets/oms-logo3.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [{
@@ -50,7 +50,7 @@ const Header = () => {
                 Login
               </Button>
               <Button variant="default" size="lg">
-                Get Started
+                Book Free Demo
               </Button>
             </div>
           </nav>
@@ -78,7 +78,7 @@ const Header = () => {
                   Login
                 </Button>
                 <Button variant="default" size="lg">
-                  Get Started
+                  Book Free Demo
                 </Button>
               </div>
             </div>

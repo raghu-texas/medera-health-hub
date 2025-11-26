@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Users, FileText, Scan, UserCircle, CreditCard } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Briefcase, Users, FileText, Scan, UserCircle, CreditCard, Workflow } from "lucide-react";
+import flowChart from "@/assets/flow-chart.png";
 
 const Services = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   const services = [
     {
       icon: Briefcase,
@@ -33,6 +38,12 @@ const Services = () => {
       title: "Account Payable",
       description: "Automated financial management system for handling payments, invoicing, and maintaining transparent billing records.",
     },
+    {
+      icon: Workflow,
+      title: "Process Chart",
+      description: "Comprehensive workflow visualization showing the integration of all systems from practice management to financial reporting.",
+      isProcessChart: true,
+    },
   ];
 
   return (
@@ -58,12 +69,19 @@ const Services = () => {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50"
-                style={{ backgroundColor: '#002868' }}
+                className="group transition-all duration-300 hover:-translate-y-1 border-border/50 cursor-pointer"
+                style={{ backgroundColor: '#0066b1' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#A9A9A9';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#0066b1';
+                }}
+                onClick={() => service.isProcessChart && setIsDialogOpen(true)}
               >
                 <CardHeader>
-                  <div className="h-14 w-14 rounded-xl bg-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Icon className="text-primary" size={28} />
+                  <div className="h-14 w-14 rounded-xl bg-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon className="text-white" size={28} />
                   </div>
                   <CardTitle className="text-xl text-white">{service.title}</CardTitle>
                 </CardHeader>
@@ -77,6 +95,39 @@ const Services = () => {
           })}
         </div>
       </div>
+
+      {/* Process Chart Dialog */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl">System Process Workflow</DialogTitle>
+            <DialogDescription>
+              Our integrated healthcare management system connects all essential components for seamless operations.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4">
+            <img 
+              src={flowChart} 
+              alt="Process Workflow Chart" 
+              className="w-full h-auto rounded-lg"
+            />
+            <div className="mt-6 space-y-3 text-sm text-muted-foreground">
+              <p>
+                <strong className="text-foreground">Practice Manager:</strong> Central hub for scheduling diagnostics and managing patient records electronically.
+              </p>
+              <p>
+                <strong className="text-foreground">Human Resources:</strong> Coordinates with payroll processing and maintains template charts for staff management.
+              </p>
+              <p>
+                <strong className="text-foreground">Group Purchasing & Accounts Payable:</strong> Manages expenses through invoice processing to maintain financial statements.
+              </p>
+              <p>
+                <strong className="text-foreground">Integrated System:</strong> All components work together to deliver comprehensive practice management from patient care to financial reporting.
+              </p>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
