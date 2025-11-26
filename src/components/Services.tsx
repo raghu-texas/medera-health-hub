@@ -81,7 +81,7 @@ const Services = () => {
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl">System Process Workflow</DialogTitle>
+            <DialogTitle className="text-2xl">Process Chart</DialogTitle>
             <DialogDescription>
               Our integrated healthcare management system connects all essential components for seamless operations.
             </DialogDescription>

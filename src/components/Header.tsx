@@ -30,7 +30,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 transition-opacity hover:opacity-80">
-            <img src={logo} alt="OMS Logo" className="h-10 w-auto object-contain" />
+            <img src={logo} alt="OMS Logo" className="h-20 w-auto object-contain" />
             
           </a>
 

@@ -23,7 +23,7 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-secondary to-primary relative overflow-hidden">
+    <section className="py-8 bg-gradient-to-br from-primary via-secondary to-primary relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
       
