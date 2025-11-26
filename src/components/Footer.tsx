@@ -1,5 +1,5 @@
 import { Mail, Phone, Clock, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import newLogo from "@/assets/new-logo.png";
+import newLogo from "@/assets/OMS_Logo.png";
 
 const Footer = () => {
   const services = [
@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* About Us */}
           <div>
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-4 bg-[#F8FAFC]">
             <img src={newLogo} alt="OMS Logo" className="h-16 w-auto object-contain" />
           </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
