@@ -8,28 +8,6 @@ import cloudSecurity from "@/assets/cloud-security.jpg";
 const Solutions = () => {
   const solutions = [
     {
-      image: statsDashboard,
-      title: "Real-Time Analytics & Insights",
-      description: "Make data-driven decisions with comprehensive analytics dashboards that track patient outcomes, operational efficiency, and financial performance in real-time.",
-      features: [
-        "Customizable reporting dashboards",
-        "Predictive analytics for patient care",
-        "Financial performance tracking",
-        "Population health management insights"
-      ]
-    },
-    {
-      image: teamCollaboration,
-      title: "Seamless Team Collaboration",
-      description: "Connect your entire healthcare team with integrated communication tools that ensure everyone stays informed and coordinated for optimal patient care delivery.",
-      features: [
-        "Secure messaging and file sharing",
-        "Multi-disciplinary care coordination",
-        "Real-time patient data access",
-        "Cross-department workflow integration"
-      ]
-    },
-    {
       image: workflowAutomation,
       title: "Intelligent Workflow Automation",
       description: "Streamline repetitive tasks and reduce administrative burden with AI-powered automation that learns from your practice patterns and optimizes operations.",
@@ -42,13 +20,13 @@ const Solutions = () => {
     },
     {
       image: cloudSecurity,
-      title: "Enterprise-Grade Security",
-      description: "Protect sensitive patient data with military-grade encryption and comprehensive compliance tools that meet HIPAA, GDPR, and other regulatory requirements.",
+      title: "Cloud Security & Compliance",
+      description: "Protect sensitive patient data with our robust cloud security solutions that ensure compliance with healthcare regulations and safeguard against cyber threats.",
       features: [
-        "End-to-end data encryption",
-        "HIPAA compliant infrastructure",
-        "Automated compliance reporting",
-        "24/7 security monitoring"
+        "HIPAA-compliant data storage",
+        "Advanced threat detection",
+        "Secure access controls",
+        "Regular compliance audits"
       ]
     }
   ];
@@ -56,18 +34,6 @@ const Solutions = () => {
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            Complete Healthcare{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Management Solutions
-            </span>
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Everything your practice needs to deliver exceptional patient care and drive operational excellence
-          </p>
-        </div>
-
         <div className="space-y-24">
           {solutions.map((solution, index) => (
             <div
@@ -79,29 +45,29 @@ const Solutions = () => {
                 <img
                   src={solution.image}
                   alt={solution.title}
-                  className="w-full h-[500px] object-cover hover:scale-110 transition-transform duration-700 ease-out"
+                  className="w-full h-[400px] object-cover hover:scale-110 transition-transform duration-700 ease-out"
                 />
               </div>
 
               {/* Content */}
-              <div className={`${index % 2 === 1 ? 'lg:order-1' : ''} space-y-6 animate-fade-in`}>
-                <h3 className="text-3xl lg:text-4xl font-bold text-foreground">
+              <div className="animate-fade-in">
+                <h3 className="text-3xl font-bold mb-4">
                   {solution.title}
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-6">
                   {solution.description}
                 </p>
-                
-                <div className="space-y-3 pt-4">
+                <ul className="space-y-2">
                   {solution.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start gap-3">
-                      <div className="mt-1 rounded-full bg-primary/10 p-1">
-                        <Check className="h-4 w-4 text-primary" />
-                      </div>
-                      <p className="text-foreground">{feature}</p>
-                    </div>
+                    <li
+                      key={featureIndex}
+                      className="flex items-center gap-3 text-muted-foreground"
+                    >
+                      <Check className="text-primary flex-shrink-0" size={18} />
+                      <span>{feature}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           ))}

@@ -21,7 +21,7 @@ const Footer = () => {
             <img src={newLogo} alt="OMS Logo" className="h-16 w-auto object-contain" />
           </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Medera is your trusted partner in healthcare, connecting patients with world-class hospitals 
+              OMSYSTEMS is your trusted partner in healthcare, connecting patients with world-class hospitals 
               and advanced medical treatments. We're committed to making quality healthcare accessible to everyone.
             </p>
           </div>
@@ -51,8 +51,8 @@ const Footer = () => {
                 <Mail className="text-primary mt-1 flex-shrink-0" size={18} />
                 <div>
                   <p className="font-medium text-foreground">Email</p>
-                  <a href="mailto:contact@medera.health" className="hover:text-primary transition-colors">
-                    contact@medera.health
+                  <a href="mailto:contact@omsystems.health" className="hover:text-primary transition-colors">
+                    contact@omsystems.health
                   </a>
                 </div>
               </div>
@@ -60,8 +60,8 @@ const Footer = () => {
                 <Phone className="text-primary mt-1 flex-shrink-0" size={18} />
                 <div>
                   <p className="font-medium text-foreground">Phone</p>
-                  <a href="tel:+1-800-MEDERA" className="hover:text-primary transition-colors">
-                    +1-800-MEDERA
+                  <a href="tel:+1-800-OMSYSTEMS" className="hover:text-primary transition-colors">
+                    +1-800-OMSYSTEMS
                   </a>
                 </div>
               </div>
@@ -119,7 +119,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Medera. All rights reserved. Your health, our priority.
+              © 2024 OMSYSTEMS. All rights reserved. Your health, our priority.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">

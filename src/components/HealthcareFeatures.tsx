@@ -32,9 +32,9 @@ const HealthcareFeatures = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            Advanced Healthcare{" "}
+            Complete Healthcare
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Features
+              Management Solutions
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">

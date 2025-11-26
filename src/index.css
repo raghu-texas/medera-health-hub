@@ -17,18 +17,18 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 24% 16%;
 
-    /* Medera teal - primary brand color */
+    /* OMSYSTEMS teal - primary brand color */
     --primary: 177 77% 43%;
     --primary-foreground: 0 0% 100%;
     
-    /* Medera blue - trust and protection */
+    /* OMSYSTEMS blue - trust and protection */
     --secondary: 207 68% 48%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    /* Medera orange - warmth and vitality */
+    /* OMSYSTEMS orange - warmth and vitality */
     --accent: 32 92% 62%;
     --accent-foreground: 0 0% 100%;
 
