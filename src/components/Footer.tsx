@@ -18,7 +18,7 @@ const Footer = () => {
           {/* About Us */}
           <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={logo} alt="OMS Logo" className="h-10 w-auto object-contain" />
+            <img src={logo} alt="OMS Logo" className="h-20 w-auto object-contain" />
           </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Medera is your trusted partner in healthcare, connecting patients with world-class hospitals 

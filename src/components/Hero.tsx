@@ -29,12 +29,6 @@ const Hero = () => {
       description: "Expert dental professionals working together with integrated digital workflows to provide comprehensive, coordinated care.",
     },
     {
-      image: dentalHero4,
-      title: "Teledentistry Services",
-      subtitle: "Dental Care Anywhere",
-      description: "Connect with experienced dental specialists remotely for consultations, follow-ups, and expert guidance from the comfort of your home.",
-    },
-    {
       image: dentalHero5,
       title: "Robotic-Assisted Dental Surgery",
       subtitle: "Precision & Innovation",

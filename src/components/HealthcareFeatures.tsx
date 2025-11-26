@@ -1,29 +1,29 @@
-import diagnosticImage from "@/assets/service-diagnostic.jpg";
-import telehealthImage from "@/assets/service-telehealth.jpg";
-import labImage from "@/assets/service-lab.jpg";
-import careImage from "@/assets/service-care.jpg";
+import practiceMgmtImage from "@/assets/feature-practice-mgmt.png";
+import patientPortalImage from "@/assets/feature-patient-portal.png";
+import emrImage from "@/assets/feature-emr.png";
+import revenueCycleImage from "@/assets/feature-revenue-cycle.png";
 
 const HealthcareFeatures = () => {
   const features = [
     {
-      image: diagnosticImage,
-      title: "AI-Enhanced Diagnostics",
-      description: "Leverage artificial intelligence to analyze medical imaging and patient data with unprecedented accuracy. Our AI systems assist healthcare professionals in detecting diseases earlier and more reliably.",
+      image: practiceMgmtImage,
+      title: "Practice Management Solutions",
+      description: "Comprehensive practice management software that streamlines scheduling, billing, and workflow optimization. Our integrated platform helps you manage every aspect of your healthcare practice efficiently, from appointment booking to revenue cycle management. Reduce administrative burden and focus more on patient care with our intelligent automation features.",
     },
     {
-      image: telehealthImage,
-      title: "Virtual Care Solutions",
-      description: "Access healthcare professionals from the comfort of your home through secure video consultations. Get prescriptions, follow-up care, and specialist opinions without the need for travel.",
+      image: patientPortalImage,
+      title: "Patient Portal & Engagement",
+      description: "Empower your patients with 24/7 access to their health records, lab results, and appointment scheduling. Our secure patient portal enhances communication between providers and patients, improving satisfaction and outcomes. Features include online bill pay, prescription refills, secure messaging, and telehealth integration for modern healthcare delivery.",
     },
     {
-      image: labImage,
-      title: "Advanced Laboratory Services",
-      description: "State-of-the-art diagnostic testing with automated precision equipment ensures accurate results. Our labs handle everything from routine blood work to specialized genetic testing.",
+      image: emrImage,
+      title: "Electronic Medical Records",
+      description: "Advanced EMR system designed for seamless clinical documentation and data management. Our intuitive interface reduces charting time while ensuring accurate, comprehensive patient records. Built-in clinical decision support, customizable templates, and interoperability standards help you deliver evidence-based care efficiently and effectively.",
     },
     {
-      image: careImage,
-      title: "Personalized Patient Care",
-      description: "Experience healthcare tailored to your unique needs with comprehensive treatment plans. Our team coordinates all aspects of your care to ensure the best possible outcomes.",
+      image: revenueCycleImage,
+      title: "Revenue Cycle Management",
+      description: "Maximize your practice's financial performance with our intelligent billing and revenue cycle management solution. Automated claim submission, denial management, and real-time eligibility verification streamline your billing processes. Our analytics dashboard provides insights into financial performance, helping you identify opportunities for revenue optimization.",
     },
   ];
 
