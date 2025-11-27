@@ -7,6 +7,15 @@ const AboutUs = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
+        {/* Page Title Section */}
+        <section className="py-12 bg-gradient-to-r from-[#2589CB] to-[#617CB5]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white text-center">
+              About Us
+            </h1>
+          </div>
+        </section>
+
         <section className="py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -21,11 +30,23 @@ const AboutUs = () => {
 
               {/* Content - Right Side */}
               <div className="space-y-6">
-                <h1 className="text-4xl sm:text-5xl font-bold" style={{ color: '#2589CB' }}>
-                  WELCOME TO ONLINE MEDSYS.COM
-                </h1>
+                {/* Modern Title Container */}
+                <div className="relative">
+                  <div 
+                    className="inline-block px-8 py-4 rounded-lg shadow-lg transform -skew-x-2"
+                    style={{ backgroundColor: '#980826' }}
+                  >
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white transform skew-x-2">
+                      WELCOME TO ONLINE MEDSYS.COM
+                    </h2>
+                  </div>
+                  <div 
+                    className="absolute -bottom-2 -right-2 w-full h-full rounded-lg -z-10 opacity-30"
+                    style={{ backgroundColor: '#980826' }}
+                  />
+                </div>
                 <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                  <p>
+                  <p className="font-semibold text-foreground">
                     OnlineMedSys.com is your complete Practice Management Solution.
                   </p>
                   <p>

@@ -60,10 +60,10 @@ const HealthcareFeatures = () => {
 
               {/* Content */}
               <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                <h3 className="text-3xl font-bold mb-4 text-foreground">
+                <h3 className={`text-3xl font-bold mb-4 ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' ? 'text-white' : 'text-foreground'}`}>
                   {feature.title}
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className={`text-lg leading-relaxed ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' ? 'text-white/90' : 'text-muted-foreground'}`}>
                   {feature.description}
                 </p>
               </div>
