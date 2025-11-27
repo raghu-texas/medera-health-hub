@@ -38,7 +38,8 @@ const Solutions = () => {
           {solutions.map((solution, index) => (
             <div
               key={index}
-              className="grid lg:grid-cols-2 gap-12 items-center"
+              className="grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl"
+              style={index % 2 === 0 ? { backgroundColor: '#617CB5' } : {}}
             >
               {/* Image */}
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} animate-fade-in overflow-hidden rounded-2xl shadow-2xl`}>
@@ -51,19 +52,19 @@ const Solutions = () => {
 
               {/* Content */}
               <div className="animate-fade-in">
-                <h3 className="text-3xl font-bold mb-4">
+                <h3 className={`text-3xl font-bold mb-4 ${index % 2 === 0 ? 'text-white' : ''}`}>
                   {solution.title}
                 </h3>
-                <p className="text-lg text-muted-foreground mb-6">
+                <p className={`text-lg mb-6 ${index % 2 === 0 ? 'text-white/90' : 'text-muted-foreground'}`}>
                   {solution.description}
                 </p>
                 <ul className="space-y-2">
                   {solution.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className="flex items-center gap-3 text-muted-foreground"
+                      className={`flex items-center gap-3 ${index % 2 === 0 ? 'text-white/90' : 'text-muted-foreground'}`}
                     >
-                      <Check className="text-primary flex-shrink-0" size={18} />
+                      <Check className={`flex-shrink-0 ${index % 2 === 0 ? 'text-white' : 'text-primary'}`} size={18} />
                       <span>{feature}</span>
                     </li>
                   ))}

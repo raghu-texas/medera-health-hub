@@ -41,7 +41,7 @@ const Services = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             Our Healthcare{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span style={{ color: '#2589CB' }}>
               Services
             </span>
           </h2>
