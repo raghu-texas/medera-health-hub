@@ -45,7 +45,7 @@ const HealthcareFeatures = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="grid md:grid-cols-2 gap-8 items-center"
+              className={`grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' ? 'bg-[#617CB5] text-white' : ''}`}
             >
               {/* Image */}
               <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>

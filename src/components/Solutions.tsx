@@ -39,10 +39,12 @@ const Solutions = () => {
             <div
               key={index}
               className="grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl"
-              style={index % 2 === 0 ? { backgroundColor: '#617CB5' } : {}}
+              style={{ backgroundColor: index % 2 === 0 ? '#617CB5' : 'transparent' }}
             >
               {/* Image */}
-              <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} animate-fade-in overflow-hidden rounded-2xl shadow-2xl`}>
+              <div
+                className={`${index % 2 === 1 ? 'lg:order-2' : ''} animate-fade-in overflow-hidden rounded-2xl shadow-2xl`}
+              >
                 <img
                   src={solution.image}
                   alt={solution.title}
