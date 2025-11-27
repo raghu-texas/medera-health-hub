@@ -54,14 +54,34 @@ const ProductsServices = () => {
       <main className="pt-20">
         <section className="py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Section Header */}
-            <div className="text-center max-w-4xl mx-auto mb-8">
-              <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                Our Healthcare{" "}
-                <span style={{ color: '#2589CB' }}>
-                  Services
-                </span>
-              </h1>
+            {/* Section Header with Modern Background */}
+            <div className="relative mb-12">
+              {/* Background Design */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#2589CB]/10 via-[#617CB5]/20 to-[#2589CB]/10 rounded-3xl transform -skew-y-1" />
+              <div className="absolute top-4 left-4 w-24 h-24 bg-[#2589CB]/10 rounded-full blur-2xl" />
+              <div className="absolute bottom-4 right-4 w-32 h-32 bg-[#617CB5]/10 rounded-full blur-2xl" />
+              
+              {/* Content */}
+              <div className="relative text-center max-w-4xl mx-auto py-12 px-8">
+                <div className="inline-block mb-4">
+                  <div className="flex items-center justify-center gap-4 mb-2">
+                    <div className="h-1 w-12 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
+                    <div className="h-2 w-2 bg-[#2589CB] rounded-full animate-pulse" />
+                    <div className="h-1 w-12 bg-gradient-to-l from-transparent to-[#2589CB] rounded-full" />
+                  </div>
+                </div>
+                <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+                  Our Healthcare{" "}
+                  <span style={{ color: '#2589CB' }}>
+                    Services
+                  </span>
+                </h1>
+                <div className="flex items-center justify-center gap-4 mt-4">
+                  <div className="h-0.5 w-16 bg-gradient-to-r from-transparent to-[#617CB5]" />
+                  <div className="h-3 w-3 border-2 border-[#2589CB] rounded-full" />
+                  <div className="h-0.5 w-16 bg-gradient-to-l from-transparent to-[#617CB5]" />
+                </div>
+              </div>
             </div>
 
             {/* Introduction Text */}
