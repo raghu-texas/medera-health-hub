@@ -1,7 +1,10 @@
 import practiceMgmtImage from "@/assets/feature-practice-mgmt.png";
 import patientPortalImage from "@/assets/feature-patient-portal.png";
-import emrImage from "@/assets/feature-emr.png";
 import revenueCycleImage from "@/assets/feature-revenue-cycle.png";
+import emrImage from "@/assets/feature-emr.png";
+import referralImage from "@/assets/referral.jpeg";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const HealthcareFeatures = () => {
   const features = [
@@ -25,6 +28,11 @@ const HealthcareFeatures = () => {
       title: "Revenue Cycle Management",
       description: "Maximize your practice's financial performance with our intelligent billing and revenue cycle management solution. Automated claim submission, denial management, and real-time eligibility verification streamline your billing processes. Our analytics dashboard provides insights into financial performance, helping you identify opportunities for revenue optimization.",
     },
+    {
+      image: referralImage,
+      title: 'Referral Portal',
+      description: 'Streamline patient referrals with our secure and efficient referral portal, ensuring seamless communication between providers.',
+    },
   ];
 
   return (
@@ -45,7 +53,7 @@ const HealthcareFeatures = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' ? 'bg-[#617CB5] text-white' : ''}`}
+              className={`grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' || feature.title === 'Intelligent Workflow Automation' || feature.title === 'Referral Portal' ? 'bg-[#FAFCFD] text-black' : ''}`}
             >
               {/* Image */}
               <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
@@ -54,18 +62,34 @@ const HealthcareFeatures = () => {
                     src={feature.image}
                     alt={feature.title}
                     className="w-full h-[400px] object-cover"
+                    onError={(e) => {
+                      const img = e.currentTarget as HTMLImageElement;
+                      if (feature.title === 'Referral Portal') {
+                        img.src = '/assets/feature-referral-portal.png';
+                      }
+                    }}
                   />
                 </div>
               </div>
 
               {/* Content */}
               <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                <h3 className={`text-3xl font-bold mb-4 ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' ? 'text-white' : 'text-foreground'}`}>
+                <h3 className={`text-3xl font-bold mb-4 ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' || feature.title === 'Intelligent Workflow Automation' || feature.title === 'Referral Portal' ? 'text-black' : 'text-foreground'}`}>
                   {feature.title}
                 </h3>
-                <p className={`text-lg leading-relaxed ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' ? 'text-white/90' : 'text-muted-foreground'}`}>
+                <p className={`text-lg leading-relaxed ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' || feature.title === 'Intelligent Workflow Automation' || feature.title === 'Referral Portal' ? 'text-black/90' : 'text-muted-foreground'}`}>
                   {feature.description}
                 </p>
+                <div className="mt-6">
+                  <Link to="/products-services">
+                    <Button
+                      size="lg"
+                      className="bg-[#980826] hover:bg-[#7d0620] text-white shadow-sm"
+                    >
+                      Explore more
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

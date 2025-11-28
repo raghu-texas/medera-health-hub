@@ -1,9 +1,7 @@
 import { useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Briefcase, Users, FileText, Scan, UserCircle, CreditCard, Workflow } from "lucide-react";
+import { Briefcase, Users, FileText, Scan, UserCircle, CreditCard, Workflow, Share2, Server, ShieldCheck } from "lucide-react";
 import flowChart from "@/assets/flow-chart.png";
 
 const ProductsServices = () => {
@@ -36,6 +34,21 @@ const ProductsServices = () => {
       description: "Secure online portal for patients to access health records, test results, appointments, and communicate with providers."
     },
     {
+      icon: Share2,
+      title: "Referral Portal",
+      description: "Streamline provider-to-provider referrals with secure data exchange and real-time tracking of patient handoffs."
+    },
+    {
+      icon: Server,
+      title: "EMR Systems",
+      description: "Robust electronic medical records platform enabling efficient clinical documentation, interoperability, and decision support."
+    },
+    {
+      icon: ShieldCheck,
+      title: "Provider Credential",
+      description: "Automated credentialing management to accelerate onboarding, maintain compliance, and reduce administrative overhead."
+    },
+    {
       icon: CreditCard,
       title: "Account Payable",
       description: "Automated financial management system for handling payments, invoicing, and maintaining transparent billing records."
@@ -49,37 +62,38 @@ const ProductsServices = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="pt-20">
+    <div>
         <section className="py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Section Header with Modern Background */}
+            {/* Section Header with Horizontal Gradient */}
             <div className="relative mb-12">
-              {/* Background Design */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2589CB]/10 via-[#617CB5]/20 to-[#2589CB]/10 rounded-3xl transform -skew-y-1" />
-              <div className="absolute top-4 left-4 w-24 h-24 bg-[#2589CB]/10 rounded-full blur-2xl" />
-              <div className="absolute bottom-4 right-4 w-32 h-32 bg-[#617CB5]/10 rounded-full blur-2xl" />
-              
+              {/* Gradient background (horizontal) */}
+              <div
+                className="absolute inset-0 rounded-3xl overflow-hidden"
+                style={{
+                  background: "linear-gradient(90deg, #EAF3FA 0%, #F4F8FC 50%, #EAF3FA 100%)"
+                }}
+              />
+              {/* Soft radial highlights */}
+              <div className="absolute top-6 left-10 w-40 h-40 bg-[#E3EEF7] rounded-full blur-3xl opacity-70" />
+              <div className="absolute bottom-6 right-10 w-48 h-48 bg-[#E3EEF7] rounded-full blur-3xl opacity-60" />
+
               {/* Content */}
-              <div className="relative text-center max-w-4xl mx-auto py-12 px-8">
-                <div className="inline-block mb-4">
-                  <div className="flex items-center justify-center gap-4 mb-2">
-                    <div className="h-1 w-12 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
-                    <div className="h-2 w-2 bg-[#2589CB] rounded-full animate-pulse" />
-                    <div className="h-1 w-12 bg-gradient-to-l from-transparent to-[#2589CB] rounded-full" />
-                  </div>
+              <div className="relative text-center max-w-4xl mx-auto py-14 px-10">
+                {/* Decorative top marker */}
+                <div className="flex items-center justify-center gap-6 mb-6">
+                  <div className="h-1 w-16 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
+                  <div className="h-2 w-2 bg-[#2589CB] rounded-full" />
+                  <div className="h-1 w-16 bg-gradient-to-l from-transparent to-[#2589CB] rounded-full" />
                 </div>
-                <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                  Our Healthcare{" "}
-                  <span style={{ color: '#2589CB' }}>
-                    Services
-                  </span>
+                <h1 className="text-4xl sm:text-5xl font-bold mb-5 tracking-tight">
+                  Our Healthcare <span className="text-[#2589CB]">Services</span>
                 </h1>
-                <div className="flex items-center justify-center gap-4 mt-4">
-                  <div className="h-0.5 w-16 bg-gradient-to-r from-transparent to-[#617CB5]" />
+                {/* Decorative bottom marker */}
+                <div className="flex items-center justify-center gap-6 mt-2">
+                  <div className="h-0.5 w-20 bg-gradient-to-r from-transparent to-[#617CB5]" />
                   <div className="h-3 w-3 border-2 border-[#2589CB] rounded-full" />
-                  <div className="h-0.5 w-16 bg-gradient-to-l from-transparent to-[#617CB5]" />
+                  <div className="h-0.5 w-20 bg-gradient-to-l from-transparent to-[#617CB5]" />
                 </div>
               </div>
             </div>
@@ -133,8 +147,6 @@ const ProductsServices = () => {
             </div>
           </div>
         </section>
-      </main>
-
       {/* Process Chart Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-auto">
@@ -154,7 +166,6 @@ const ProductsServices = () => {
         </DialogContent>
       </Dialog>
 
-      <Footer />
     </div>
   );
 };
