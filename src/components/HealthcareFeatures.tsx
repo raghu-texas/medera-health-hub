@@ -5,6 +5,7 @@ import emrImage from "@/assets/feature-emr.png";
 import referralImage from "@/assets/referral.jpeg";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+
 const HealthcareFeatures = () => {
   const features = [{
     image: practiceMgmtImage,
@@ -27,30 +28,38 @@ const HealthcareFeatures = () => {
     title: 'Referral Portal',
     description: 'Streamline patient referrals with our secure and efficient referral portal, ensuring seamless communication between providers.'
   }];
-  return <section className="py-24 bg-background">
+
+  return (
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            <span style={{
-            color: '#2589CB'
-          }}>              Your Complete                        Practice Management Solution</span>
+        <div className="max-w-3xl mx-auto mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-left uppercase tracking-wide" style={{ color: '#2589CB' }}>
+            <span className="block">Your Complete</span>
+            <span className="block">Practice Management</span>
+            <span className="block">Solution</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground text-left">
             Discover our comprehensive suite of healthcare services designed to provide exceptional care.
           </p>
         </div>
 
         <div className="space-y-16">
-          {features.map((feature, index) => <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' || feature.title === 'Intelligent Workflow Automation' || feature.title === 'Referral Portal' ? 'bg-[#E8E6E3] text-black' : ''}`}>
+          {features.map((feature, index) => (
+            <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' || feature.title === 'Intelligent Workflow Automation' || feature.title === 'Referral Portal' ? 'bg-[#E8E6E3] text-black' : ''}`}>
               {/* Image */}
               <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
                 <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                  <img src={feature.image} alt={feature.title} className="w-full h-[400px] object-cover" onError={e => {
-                const img = e.currentTarget as HTMLImageElement;
-                if (feature.title === 'Referral Portal') {
-                  img.src = '/assets/feature-referral-portal.png';
-                }
-              }} />
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title} 
+                    className="w-full h-[400px] object-cover" 
+                    onError={e => {
+                      const img = e.currentTarget as HTMLImageElement;
+                      if (feature.title === 'Referral Portal') {
+                        img.src = '/assets/feature-referral-portal.png';
+                      }
+                    }} 
+                  />
                 </div>
               </div>
 
@@ -70,9 +79,12 @@ const HealthcareFeatures = () => {
                   </Link>
                 </div>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HealthcareFeatures;
