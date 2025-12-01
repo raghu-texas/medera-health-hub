@@ -38,7 +38,7 @@ const HealthcareFeatures = () => {
             <span className="block">Practice Management</span>
             <span className="block">Solution</span>
           </h2>
-          <p className="text-xl text-muted-foreground text-right">
+          <p className="text-xl text-muted-foreground text-right whitespace-nowrap">
             Discover our comprehensive suite of healthcare services designed to provide exceptional care.
           </p>
         </div>
