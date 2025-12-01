@@ -53,7 +53,7 @@ const HealthcareFeatures = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' || feature.title === 'Intelligent Workflow Automation' || feature.title === 'Referral Portal' ? 'bg-[#FAFCFD] text-black' : ''}`}
+              className={`grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl ${feature.title === 'Practice Management Solutions' || feature.title === 'Electronic Medical Records' || feature.title === 'Intelligent Workflow Automation' || feature.title === 'Referral Portal' ? 'bg-[#E8E6E3] text-black' : ''}`}
             >
               {/* Image */}
               <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
