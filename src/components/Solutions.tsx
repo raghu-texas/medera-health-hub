@@ -37,26 +37,18 @@ const Solutions = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-16">
           {solutions.map((solution, index) => {
-            const light = solution.title === "Cloud Security & Compliance";
+            const isLight = solution.title === "Cloud Security & Compliance" || solution.title === "Intelligent Workflow Automation";
             return (
               <div
                 key={index}
                 className="grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl"
                 style={{
-                  backgroundColor: light
-                    ? "#FAFCFD"
-                    : index % 2 === 0
-                    ? "#617CB5"
-                    : "transparent",
+                  backgroundColor: isLight ? "#E8E6E3" : "transparent",
                 }}
               >
                 <div
                   className={`${
-                    light
-                      ? "lg:order-2"
-                      : solution.title === "Intelligent Workflow Automation"
-                      ? ""
-                      : index % 2 === 1
+                    solution.title === "Cloud Security & Compliance"
                       ? "lg:order-2"
                       : ""
                   } animate-fade-in overflow-hidden rounded-2xl shadow-2xl`}
@@ -68,27 +60,15 @@ const Solutions = () => {
                   />
                 </div>
                 <div
-                  className={`animate-fade-in ${light ? "lg:order-1" : ""}`}
+                  className={`animate-fade-in ${solution.title === "Cloud Security & Compliance" ? "lg:order-1" : ""}`}
                 >
                   <h3
-                    className={`text-3xl font-bold mb-4 ${
-                      light
-                        ? "text-black"
-                        : index % 2 === 0
-                        ? "text-white"
-                        : ""
-                    }`}
+                    className={`text-3xl font-bold mb-4 ${isLight ? "text-black" : "text-foreground"}`}
                   >
                     {solution.title}
                   </h3>
                   <p
-                    className={`text-lg mb-6 ${
-                      light
-                        ? "text-black/90"
-                        : index % 2 === 0
-                        ? "text-white/90"
-                        : "text-muted-foreground"
-                    }`}
+                    className={`text-lg mb-6 ${isLight ? "text-black/90" : "text-muted-foreground"}`}
                   >
                     {solution.description}
                   </p>
@@ -96,22 +76,10 @@ const Solutions = () => {
                     {solution.features.map((feature, featureIndex) => (
                       <li
                         key={featureIndex}
-                        className={`flex items-center gap-3 ${
-                          light
-                            ? "text-black/90"
-                            : index % 2 === 0
-                            ? "text-white/90"
-                            : "text-muted-foreground"
-                        }`}
+                        className={`flex items-center gap-3 ${isLight ? "text-black/90" : "text-muted-foreground"}`}
                       >
                         <Check
-                          className={`flex-shrink-0 ${
-                            light
-                              ? "text-primary"
-                              : index % 2 === 0
-                              ? "text-white"
-                              : "text-primary"
-                          }`}
+                          className={isLight ? "text-primary flex-shrink-0" : "text-primary flex-shrink-0"}
                           size={18}
                         />
                         <span>{feature}</span>
