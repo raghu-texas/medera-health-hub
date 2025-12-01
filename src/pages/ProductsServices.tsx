@@ -57,11 +57,11 @@ const ProductsServices = () => {
             background: "linear-gradient(90deg, #EAF3FA 0%, #F4F8FC 50%, #EAF3FA 100%)"
           }} />
               {/* Soft radial highlights */}
-              <div className="absolute top-6 left-10 w-40 h-40 bg-[#E3EEF7] rounded-full blur-3xl opacity-70" />
-              <div className="absolute bottom-6 right-10 w-48 h-48 bg-[#E3EEF7] rounded-full blur-3xl opacity-60" />
+              <div className="absolute top-4 left-10 w-32 h-32 bg-[#E3EEF7] rounded-full blur-3xl opacity-70" />
+              <div className="absolute bottom-4 right-10 w-40 h-40 bg-[#E3EEF7] rounded-full blur-3xl opacity-60" />
 
               {/* Content */}
-              <div className="relative text-center max-w-4xl mx-auto py-14 px-10">
+              <div className="relative text-center max-w-4xl mx-auto py-8 px-10">
                 {/* Decorative top marker */}
                 <div className="flex items-center justify-center gap-6 mb-6">
                   <div className="h-1 w-16 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
