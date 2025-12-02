@@ -12,7 +12,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="bg-muted/50 border-t border-border">
+    <footer id="contact" className="bg-white border-t border-border">
       <div className="container mx-auto p-3">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* About Us */}
