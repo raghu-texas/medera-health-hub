@@ -42,9 +42,9 @@ const Hero = () => {
         ]}
         className="w-full h-screen"
       >
-        <CarouselContent>
+        <CarouselContent className="h-screen -ml-0">
           {slides.map((slide, index) => (
-            <CarouselItem key={index}>
+            <CarouselItem key={index} className="pl-0">
               <div className="relative w-full h-screen flex items-center">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
