@@ -1,8 +1,9 @@
 import teamCollaboration from "@/assets/team-collaboration.jpg";
 import partnersBanner from "@/assets/partners-banner.png";
-import dentalHero1 from "@/assets/dental-hero-1.jpg";
-import dentalHero2 from "@/assets/dental-hero-2.jpg";
-import dentalHero3 from "@/assets/dental-hero-3.jpg";
+import practiceMgmtImage from "@/assets/feature-practice-mgmt.png";
+import revenueCycleImage from "@/assets/feature-revenue-cycle.png";
+import accountsPayableImage from "@/assets/feature-accounts-payable.png";
+import cloudSecurity from "@/assets/cloud-security.jpg";
 
 const AboutUs = () => {
   return (
@@ -104,25 +105,25 @@ const AboutUs = () => {
                 title: "Additional Business Service Options",
                 description:
                   "By combining the talents of our professionals and partners, we can provide you with additional tools and the insight for complete and efficient Practice Management. We have built a suite of services and products that gives providers and staff the ability to solve the practical challenges of running a practice more efficiently and profitably.",
-                image: dentalHero2,
+                image: practiceMgmtImage,
               },
               {
                 title: "Full Financial Services",
                 description:
                   "OnlineMedSys.com offers a complete suite of practice management services by providing comprehensive financial and operational services to medical and dental practices through OMS Partners at www.OMSP.com.",
-                image: dentalHero1,
+                image: accountsPayableImage,
               },
               {
                 title: "Billing & Collections",
                 description:
                   "Streamline your operational workflow of the traditional billing and collection processes with help from OMS Partners. Patient scheduling, patient alerts, patient office flow, proper billing, and timely collections are the lifeblood of any medical and dental practice.",
-                image: dentalHero3,
+                image: revenueCycleImage,
               },
               {
                 title: "IT Review",
                 description:
                   "OnlineMedSys.com can work with your local technology vendor to review the design, purchase and installation of your customized practice's computer resources to ensure compatibility with our applications.",
-                image: teamCollaboration,
+                image: cloudSecurity,
               },
             ].map((card, idx) => (
               <div
