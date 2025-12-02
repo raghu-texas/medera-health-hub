@@ -33,7 +33,7 @@ const solutions = [
 
 const Solutions = () => {
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
           {solutions.map((solution, index) => {
