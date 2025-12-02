@@ -55,17 +55,18 @@ const HealthcareFeatures = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="pt-24 pb-8 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-right uppercase tracking-wide" style={{ color: '#2589CB' }}>
-            <span className="block">Your Complete</span>
+            <span className="block">Your Oral Surgery</span>
             <span className="block">Practice Management</span>
             <span className="block">Solution</span>
           </h2>
-          <p className="text-xl text-muted-foreground text-right whitespace-nowrap">
-            Discover our comprehensive suite of healthcare services designed to provide exceptional care.
-          </p>
+            <p className="text-xl text-muted-foreground text-right">
+              <span className="block">Our cloud-based technology delivers powerful solutions – providing</span>
+              <span className="block">the practice management tools necessary for your success.</span>
+            </p>
         </div>
 
         <div className="space-y-8">
@@ -74,7 +75,7 @@ const HealthcareFeatures = () => {
             return (
               <div
                 key={index}
-                className={`grid lg:grid-cols-2 gap-8 items-center p-8 rounded-2xl ${isLightBg ? 'bg-[#E8E6E3] text-black' : ''}`}
+                className={`grid lg:grid-cols-2 gap-8 items-center p-8 rounded-2xl ${isLightBg ? 'bg-[#FAFCFD] text-black' : ''}`}
               >
                 {/* Image */}
                 <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>

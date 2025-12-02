@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Briefcase, Users, FileText, Scan, UserCircle, CreditCard, Workflow, Share2, Server, ShieldCheck } from "lucide-react";
 import flowChart from "@/assets/flow-chart.png";
+import featuresChart from "@/assets/Features Chart.avif";
 
 const ProductsServices = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -57,7 +58,7 @@ const ProductsServices = () => {
           <div className="relative mb-12">
             {/* Gradient background (horizontal) - fit content width */}
             <div className="flex justify-center">
-              <div className="relative inline-block">
+              <div className="relative inline-block" style={{ width: 'max-content', height: 'fit-content' }}>
                 <div
                   className="absolute inset-0 rounded-3xl overflow-hidden"
                   style={{
@@ -69,18 +70,18 @@ const ProductsServices = () => {
                 <div className="absolute bottom-4 right-10 w-40 h-40 bg-[#E3EEF7] rounded-full blur-3xl opacity-60" />
 
                 {/* Content */}
-                <div className="relative text-center py-8 px-10">
+                <div className="relative text-center py-4 px-10">
                   {/* Decorative top marker */}
-                  <div className="flex items-center justify-center gap-6 mb-6">
+                  <div className="flex items-center justify-center gap-6 mb-3">
                     <div className="h-1 w-16 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
                     <div className="h-2 w-2 bg-[#2589CB] rounded-full" />
                     <div className="h-1 w-16 bg-gradient-to-l from-transparent to-[#2589CB] rounded-full" />
                   </div>
-                  <h1 className="text-4xl sm:text-5xl font-bold mb-5 tracking-tight text-[#0D47A1]">
+                  <h1 className="text-4xl sm:text-5xl font-bold mb-3 tracking-tight text-[#0D47A1]">
                     Our Products & Healthcare <span className="text-[#2589CB]">Services</span>
                   </h1>
                   {/* Decorative bottom marker */}
-                  <div className="flex items-center justify-center gap-6 mt-2">
+                  <div className="flex items-center justify-center gap-6 mt-1">
                     <div className="h-0.5 w-20 bg-gradient-to-r from-transparent to-[#617CB5]" />
                     <div className="h-3 w-3 border-2 border-[#2589CB] rounded-full" />
                     <div className="h-0.5 w-20 bg-gradient-to-l from-transparent to-[#617CB5]" />
@@ -103,6 +104,50 @@ const ProductsServices = () => {
               <li>We provide robust security and world-wide accessibility</li>
               <li>You manage your practice – we manage the technology</li>
             </ul>
+          </div>
+
+          {/* Process Chart Image */}
+          <div className="mb-12 max-w-4xl mx-auto">
+            <img
+              src={flowChart}
+              alt="Process Workflow Chart"
+              className="w-full h-auto rounded-lg shadow"
+            />
+          </div>
+
+          {/* About Content (from image text) */}
+          <div className="max-w-4xl mx-auto mb-12 text-lg text-muted-foreground leading-relaxed space-y-4">
+            <p>
+              OnlineMedSys.com Practice Manager features integrated tools for key patient and revenue
+              management functions. Together, they will help you manage your practice more easily and
+              efficiently.
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Scheduling</li>
+              <li>Billing &amp; Claims</li>
+              <li>Patient Records</li>
+              <li>Reporting</li>
+              <li>Correspondence Tools</li>
+              <li>Scanning</li>
+              <li>Cross Coding</li>
+            </ul>
+            <p>
+              All patient and financial data is centrally stored in highly secure off-site data centers and
+              accessed via the Internet through a Web browser. Users can access and process data on demand
+              from within any section of Practice Manager, as long as they are authorized and have an Internet
+              connection. This eliminates duplicate data entry and increases staff productivity. In addition,
+              Practice Manager gives you and your management team powerful new reporting capabilities for
+              aggregating and analyzing diverse data.
+            </p>
+          </div>
+
+          {/* Features Chart Image */}
+          <div className="mb-12 max-w-4xl mx-auto">
+            <img
+              src={featuresChart}
+              alt="Features Chart"
+              className="w-full h-auto rounded-lg shadow"
+            />
           </div>
 
           {/* Service Cards */}

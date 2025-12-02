@@ -33,7 +33,7 @@ const solutions = [
 
 const Solutions = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="pt-8 pb-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
           {solutions.map((solution, index) => {
@@ -43,7 +43,12 @@ const Solutions = () => {
                 key={index}
                 className="grid lg:grid-cols-2 gap-8 items-center p-8 rounded-2xl"
                 style={{
-                  backgroundColor: isLight ? "#E8E6E3" : "transparent",
+                  backgroundColor:
+                    solution.title === "Cloud Security & Compliance"
+                      ? "#FFFFFF"
+                      : solution.title === "Intelligent Workflow Automation"
+                      ? "#FAFCFD"
+                      : "transparent",
                 }}
               >
                 <div
