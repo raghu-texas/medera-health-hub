@@ -17,15 +17,15 @@ const Header = () => {
       isRoute: true
     },
     {
-      name: "About us",
-      href: "/about-us",
-      icon: Info,
-      isRoute: true
-    },
-    {
       name: "Product & Services",
       href: "/products-services",
       icon: Package,
+      isRoute: true
+    },
+    {
+      name: "About us",
+      href: "/about-us",
+      icon: Info,
       isRoute: true
     },
     {

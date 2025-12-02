@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Briefcase, Users, FileText, Scan, UserCircle, CreditCard, Workflow, Share2, Server, ShieldCheck } from "lucide-react";
 import flowChart from "@/assets/flow-chart.png";
+
 const ProductsServices = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const services = [{
@@ -47,80 +48,100 @@ const ProductsServices = () => {
     description: "Comprehensive workflow visualization showing the integration of all systems from practice management to financial reporting.",
     isProcessChart: true
   }];
-  return <div>
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Section Header with Horizontal Gradient */}
-            <div className="relative mb-12">
-              {/* Gradient background (horizontal) */}
-              <div className="absolute inset-0 rounded-3xl overflow-hidden" style={{
-            background: "linear-gradient(90deg, #EAF3FA 0%, #F4F8FC 50%, #EAF3FA 100%)"
-          }} />
-              {/* Soft radial highlights */}
-              <div className="absolute top-4 left-10 w-32 h-32 bg-[#E3EEF7] rounded-full blur-3xl opacity-70" />
-              <div className="absolute bottom-4 right-10 w-40 h-40 bg-[#E3EEF7] rounded-full blur-3xl opacity-60" />
 
-              {/* Content */}
-              <div className="relative text-center max-w-4xl mx-auto py-8 px-10">
-                {/* Decorative top marker */}
-                <div className="flex items-center justify-center gap-6 mb-6">
-                  <div className="h-1 w-16 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
-                  <div className="h-2 w-2 bg-[#2589CB] rounded-full" />
-                  <div className="h-1 w-16 bg-gradient-to-l from-transparent to-[#2589CB] rounded-full" />
-                </div>
-                <h1 className="text-4xl sm:text-5xl font-bold mb-5 tracking-tight">Our Products & Healthcare Services<span className="text-[#2589CB]">Services</span>
-                </h1>
-                {/* Decorative bottom marker */}
-                <div className="flex items-center justify-center gap-6 mt-2">
-                  <div className="h-0.5 w-20 bg-gradient-to-r from-transparent to-[#617CB5]" />
-                  <div className="h-3 w-3 border-2 border-[#2589CB] rounded-full" />
-                  <div className="h-0.5 w-20 bg-gradient-to-l from-transparent to-[#617CB5]" />
+  return (
+    <div>
+      <section className="pt-24 pb-10 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header with Horizontal Gradient */}
+          <div className="relative mb-12">
+            {/* Gradient background (horizontal) - fit content width */}
+            <div className="flex justify-center">
+              <div className="relative inline-block">
+                <div
+                  className="absolute inset-0 rounded-3xl overflow-hidden"
+                  style={{
+                    background: "linear-gradient(90deg, #EAF3FA 0%, #F4F8FC 50%, #EAF3FA 100%)"
+                  }}
+                />
+                {/* Soft radial highlights */}
+                <div className="absolute top-4 left-10 w-32 h-32 bg-[#E3EEF7] rounded-full blur-3xl opacity-70" />
+                <div className="absolute bottom-4 right-10 w-40 h-40 bg-[#E3EEF7] rounded-full blur-3xl opacity-60" />
+
+                {/* Content */}
+                <div className="relative text-center py-8 px-10">
+                  {/* Decorative top marker */}
+                  <div className="flex items-center justify-center gap-6 mb-6">
+                    <div className="h-1 w-16 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
+                    <div className="h-2 w-2 bg-[#2589CB] rounded-full" />
+                    <div className="h-1 w-16 bg-gradient-to-l from-transparent to-[#2589CB] rounded-full" />
+                  </div>
+                  <h1 className="text-4xl sm:text-5xl font-bold mb-5 tracking-tight text-[#0D47A1]">
+                    Our Products & Healthcare <span className="text-[#2589CB]">Services</span>
+                  </h1>
+                  {/* Decorative bottom marker */}
+                  <div className="flex items-center justify-center gap-6 mt-2">
+                    <div className="h-0.5 w-20 bg-gradient-to-r from-transparent to-[#617CB5]" />
+                    <div className="h-3 w-3 border-2 border-[#2589CB] rounded-full" />
+                    <div className="h-0.5 w-20 bg-gradient-to-l from-transparent to-[#617CB5]" />
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Introduction Text */}
-            <div className="max-w-4xl mx-auto mb-16 text-lg text-muted-foreground leading-relaxed space-y-4">
-              <p>
-                The OnlineMedSys.com system provides many features that translate into increased productivity 
-                and enhanced patient care. The application modules are tightly integrated to minimize the need 
-                for duplicate data entry, to streamline and speed the workflow process, and to give 
-                comprehensive reports about patients and practice activity.
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>We link directly to the internet-providing you with fast, secure information anytime, anywhere</li>
-                <li>We provide robust security and world-wide accessibility</li>
-                <li>You manage your practice – we manage the technology</li>
-              </ul>
-            </div>
-
-            {/* Service Cards */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service, index) => {
-            const Icon = service.icon;
-            return <Card key={index} className="group transition-all duration-300 hover:-translate-y-1 border-border/50 cursor-pointer" style={{
-              backgroundColor: '#0066b1'
-            }} onMouseEnter={e => {
-              e.currentTarget.style.backgroundColor = '#A9A9A9';
-            }} onMouseLeave={e => {
-              e.currentTarget.style.backgroundColor = '#0066b1';
-            }} onClick={() => service.isProcessChart && setIsDialogOpen(true)}>
-                    <CardHeader>
-                      <div className="h-14 w-14 rounded-xl bg-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <Icon className="text-white" size={28} />
-                      </div>
-                      <CardTitle className="text-xl text-white">{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base leading-relaxed text-white/90">
-                        {service.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>;
-          })}
-            </div>
           </div>
-        </section>
+
+          {/* Introduction Text */}
+          <div className="max-w-4xl mx-auto mb-16 text-lg text-muted-foreground leading-relaxed space-y-4">
+            <p>
+              The OnlineMedSys.com system provides many features that translate into increased productivity 
+              and enhanced patient care. The application modules are tightly integrated to minimize the need 
+              for duplicate data entry, to streamline and speed the workflow process, and to give 
+              comprehensive reports about patients and practice activity.
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>We link directly to the internet-providing you with fast, secure information anytime, anywhere</li>
+              <li>We provide robust security and world-wide accessibility</li>
+              <li>You manage your practice – we manage the technology</li>
+            </ul>
+          </div>
+
+          {/* Service Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <Card
+                  key={index}
+                  className="group transition-all duration-300 hover:-translate-y-1 border-border/50 cursor-pointer"
+                  style={{
+                    backgroundColor: '#0066b1'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.backgroundColor = '#A9A9A9';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.backgroundColor = '#0066b1';
+                  }}
+                  onClick={() => service.isProcessChart && setIsDialogOpen(true)}
+                >
+                  <CardHeader>
+                    <div className="h-14 w-14 rounded-xl bg-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <Icon className="text-white" size={28} />
+                    </div>
+                    <CardTitle className="text-xl text-white">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base leading-relaxed text-white/90">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Process Chart Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-auto">
@@ -135,7 +156,8 @@ const ProductsServices = () => {
           </div>
         </DialogContent>
       </Dialog>
-
-    </div>;
+    </div>
+  );
 };
+
 export default ProductsServices;
