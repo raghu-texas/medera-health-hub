@@ -35,13 +35,13 @@ const Solutions = () => {
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-16">
+        <div className="space-y-8">
           {solutions.map((solution, index) => {
             const isLight = solution.title === "Cloud Security & Compliance" || solution.title === "Intelligent Workflow Automation";
             return (
               <div
                 key={index}
-                className="grid lg:grid-cols-2 gap-12 items-center p-8 rounded-2xl"
+                className="grid lg:grid-cols-2 gap-8 items-center p-8 rounded-2xl"
                 style={{
                   backgroundColor: isLight ? "#E8E6E3" : "transparent",
                 }}

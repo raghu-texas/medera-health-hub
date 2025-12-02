@@ -1,37 +1,43 @@
 import teamCollaboration from "@/assets/team-collaboration.jpg";
+import partnersBanner from "@/assets/partners-banner.png";
 
 const AboutUs = () => {
   return (
     <div>
       <main>
         {/* Page Title Section with Horizontal Gradient */}
-        <section className="py-10">
+        <section className="pt-24 pb-10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative mb-4">
-              {/* Horizontal gradient background */}
-              <div
-                className="absolute inset-0 rounded-3xl overflow-hidden"
-                style={{
-                  background: "linear-gradient(90deg, #EAF3FA 0%, #F4F8FC 50%, #EAF3FA 100%)"
-                }}
-              />
-              {/* Radial soft highlights */}
-              <div className="absolute top-4 left-10 w-32 h-32 bg-[#E3EEF7] rounded-full blur-3xl opacity-70" />
-              <div className="absolute bottom-4 right-10 w-40 h-40 bg-[#E3EEF7] rounded-full blur-3xl opacity-60" />
-              {/* Content */}
-              <div className="relative text-center max-w-4xl mx-auto py-8 px-10">
-                <div className="flex items-center justify-center gap-6 mb-6">
-                  <div className="h-1 w-16 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
-                  <div className="h-2 w-2 bg-[#2589CB] rounded-full" />
-                  <div className="h-1 w-16 bg-gradient-to-l from-transparent to-[#2589CB] rounded-full" />
-                </div>
-                <h1 className="text-4xl sm:text-5xl font-bold mb-5 tracking-tight text-[#0D47A1]">
-                  About <span className="text-[#2589CB]">Us</span>
-                </h1>
-                <div className="flex items-center justify-center gap-6 mt-2">
-                  <div className="h-0.5 w-20 bg-gradient-to-r from-transparent to-[#617CB5]" />
-                  <div className="h-3 w-3 border-2 border-[#2589CB] rounded-full" />
-                  <div className="h-0.5 w-20 bg-gradient-to-l from-transparent to-[#617CB5]" />
+              {/* Centered fit-content container */}
+              <div className="flex justify-center">
+                <div className="relative inline-block">
+                  {/* Horizontal gradient background */}
+                  <div
+                    className="absolute inset-0 rounded-3xl overflow-hidden"
+                    style={{
+                      background: "linear-gradient(90deg, #EAF3FA 0%, #F4F8FC 50%, #EAF3FA 100%)"
+                    }}
+                  />
+                  {/* Radial soft highlights */}
+                  <div className="absolute top-4 left-10 w-32 h-32 bg-[#E3EEF7] rounded-full blur-3xl opacity-70" />
+                  <div className="absolute bottom-4 right-10 w-40 h-40 bg-[#E3EEF7] rounded-full blur-3xl opacity-60" />
+                  {/* Content */}
+                  <div className="relative text-center py-8 px-10">
+                    <div className="flex items-center justify-center gap-6 mb-6">
+                      <div className="h-1 w-16 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
+                      <div className="h-2 w-2 bg-[#2589CB] rounded-full" />
+                      <div className="h-1 w-16 bg-gradient-to-l from-transparent to-[#2589CB] rounded-full" />
+                    </div>
+                    <h1 className="text-4xl sm:text-5xl font-bold mb-5 tracking-tight text-[#0D47A1]">
+                      About <span className="text-[#2589CB]">Us</span>
+                    </h1>
+                    <div className="flex items-center justify-center gap-6 mt-2">
+                      <div className="h-0.5 w-20 bg-gradient-to-r from-transparent to-[#617CB5]" />
+                      <div className="h-3 w-3 border-2 border-[#2589CB] rounded-full" />
+                      <div className="h-0.5 w-20 bg-gradient-to-l from-transparent to-[#617CB5]" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -82,6 +88,17 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Partners Section */}
+        <section className="py-0">
+          <div className="w-full">
+            <img
+              src={partnersBanner}
+              alt="Our Partners - DrFirst, OMS Partners LLC, Texas AI"
+              className="w-full h-auto object-cover"
+            />
           </div>
         </section>
       </main>

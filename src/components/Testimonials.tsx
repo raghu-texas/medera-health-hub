@@ -9,7 +9,7 @@ const Testimonials = () => {
     {
       image: testimonial1,
       name: "Sarah Mitchell",
-      role: "Patient",
+      role: "Provider",
       feedback: "The telemedicine service has been a game-changer for me. I can now consult with specialists without traveling long distances. The quality of care is exceptional, and the platform is incredibly easy to use.",
       rating: 5,
     },
@@ -23,7 +23,7 @@ const Testimonials = () => {
     {
       image: testimonial3,
       name: "Michael Torres",
-      role: "Patient",
+      role: "Provider",
       feedback: "The personalized care approach made all the difference in my treatment journey. The medical team was always available, and the coordination between different specialists was outstanding.",
       rating: 5,
     },
@@ -36,7 +36,7 @@ const Testimonials = () => {
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             What Our{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Patients Say
+              Practices Say
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
