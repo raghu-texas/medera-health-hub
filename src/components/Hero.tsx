@@ -5,6 +5,7 @@ import Autoplay from "embla-carousel-autoplay";
 import dentalHero1 from "@/assets/dental-hero-1.jpg";
 import dentalHero2 from "@/assets/dental-hero-2.jpg";
 import dentalHero3 from "@/assets/dental-hero-3.jpg";
+import dentalAI from "@/assets/Dental AI.jpg";
 
 const Hero = () => {
   const slides = [
@@ -15,10 +16,10 @@ const Hero = () => {
       description: "Our cloud-based technology delivers powerful solutions – providing the practice management tools necessary for your success."
     },
     {
-      image: dentalHero1,
-      title: "AI-Powered Dental Diagnostics",
+      image: dentalAI,
+      title: "AI-Powered EMR System",
       subtitle: "Revolutionizing Dental Care",
-      description: "Experience cutting-edge AI technology that enables faster, more accurate dental diagnoses for better patient outcomes and treatment planning."
+      description: "Transforming healthcare with AI-driven EMR for faster, accurate, and intelligent care"
     },
     {
       image: dentalHero3,

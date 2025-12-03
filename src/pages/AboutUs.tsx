@@ -1,5 +1,5 @@
 import teamCollaboration from "@/assets/team-collaboration.jpg";
-import partnersBanner from "@/assets/partners-banner.png";
+import partnersImage from "@/assets/image.png";
 import practiceMgmtImage from "@/assets/feature-practice-mgmt.png";
 import revenueCycleImage from "@/assets/feature-revenue-cycle.png";
 import accountsPayableImage from "@/assets/feature-accounts-payable.png";
@@ -158,7 +158,7 @@ const AboutUs = () => {
         <section className="py-0">
           <div className="w-full">
             <img
-              src={partnersBanner}
+              src={partnersImage}
               alt="Our Partners - DrFirst, OMS Partners LLC, Texas AI"
               className="w-full h-auto object-cover"
             />
