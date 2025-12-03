@@ -58,8 +58,13 @@ const HealthcareFeatures = () => {
     <section className="pt-24 pb-8 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto mb-16">
+<<<<<<< HEAD
           <h2 className="font-bold mb-4 text-right uppercase tracking-wide text-[40px] leading-tight pr-24" style={{ color: '#2589CB' }}>
             <span className="block">Your Oral Surgery</span>
+=======
+          <h2 className="font-bold mb-4 text-right uppercase tracking-wide text-[40px] leading-tight pr-12" style={{ color: '#2589CB' }}>
+            <span className="block">Your Complete</span>
+>>>>>>> 187d90d0d5935af1a71fc116d575f16f2a83ac6e
             <span className="block">Practice Management</span>
             <span className="block">Solution</span>
           </h2>
