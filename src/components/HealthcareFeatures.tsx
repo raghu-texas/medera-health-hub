@@ -41,12 +41,11 @@ const HealthcareFeatures = () => {
   return <section className="pt-8 pb-8 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto mb-16">
-          <h2 className="font-bold mb-4 text-right uppercase tracking-wide text-[40px] leading-tight pr-24" style={{
+          <h2 className="font-bold mb-4 text-center uppercase tracking-wide text-[40px] leading-tight" style={{
           color: '#2589CB'
         }}>
             <span className="block">YOUR ORAL SURGERY</span>
-            <span className="block">PRACTICE MANAGEMENT SOLUTI</span>
-            
+            <span className="block">PRACTICE MANAGEMENT SOLUTION</span>
           </h2>
             <p className="text-xl text-muted-foreground text-center">
               <span className="block">Our cloud-based technology delivers powerful solutions – providing</span>
