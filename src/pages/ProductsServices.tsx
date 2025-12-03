@@ -43,11 +43,6 @@ const ProductsServices = () => {
     icon: CreditCard,
     title: "Account Payable",
     description: "Automated financial management system for handling payments, invoicing, and maintaining transparent billing records."
-  }, {
-    icon: Workflow,
-    title: "Process Chart",
-    description: "Comprehensive workflow visualization showing the integration of all systems from practice management to financial reporting.",
-    isProcessChart: true
   }];
 
   return (
@@ -58,7 +53,7 @@ const ProductsServices = () => {
           <div className="relative mb-12">
             {/* Gradient background (horizontal) - fit content width */}
             <div className="flex justify-center">
-              <div className="relative inline-block" style={{ width: 'max-content', height: 'fit-content' }}>
+              <div className="relative inline-block" style={{ width: 'min(100%, 56rem)', height: 'fit-content' }}>
                 <div
                   className="absolute inset-0 rounded-3xl overflow-hidden"
                   style={{
@@ -70,14 +65,14 @@ const ProductsServices = () => {
                 <div className="absolute bottom-4 right-10 w-40 h-40 bg-[#E3EEF7] rounded-full blur-3xl opacity-60" />
 
                 {/* Content */}
-                <div className="relative text-center py-4 px-10">
+                <div className="relative text-center py-4 px-10 w-full">
                   {/* Decorative top marker */}
                   <div className="flex items-center justify-center gap-6 mb-3">
                     <div className="h-1 w-16 bg-gradient-to-r from-transparent to-[#2589CB] rounded-full" />
                     <div className="h-2 w-2 bg-[#2589CB] rounded-full" />
                     <div className="h-1 w-16 bg-gradient-to-l from-transparent to-[#2589CB] rounded-full" />
                   </div>
-                  <h1 className="text-4xl sm:text-5xl font-bold mb-3 tracking-tight text-[#0D47A1]">
+                  <h1 className="text-4xl sm:text-5xl font-bold mb-3 tracking-tight text-[#0D47A1] whitespace-nowrap">
                     Our Products & Healthcare <span className="text-[#2589CB]">Services</span>
                   </h1>
                   {/* Decorative bottom marker */}

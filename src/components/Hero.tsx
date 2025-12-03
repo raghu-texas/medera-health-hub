@@ -54,8 +54,8 @@ const Hero = () => {
 
                 {/* Content */}
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                  <div className="max-w-3xl">
-                    <h1 className="font-bold mb-6 animate-fade-in text-foreground" style={{ fontSize: '50px', lineHeight: '1.1' }}>
+                  <div className="max-w-4xl">
+                    <h1 className="font-bold mb-6 animate-fade-in text-foreground break-words" style={{ fontSize: '50px', lineHeight: '1.3' }}>
                       {index === 0 ? (
                         <>
                           <span className="block">Your Oral Surgery</span>

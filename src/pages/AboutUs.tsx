@@ -17,7 +17,7 @@ const AboutUs = () => {
               <div className="flex justify-center">
                 <div
                   className="relative inline-block"
-                  style={{ width: 'max-content', height: 'fit-content', minWidth: 'min(100%, 48rem)' }}
+                  style={{ width: 'min(100%, 56rem)', height: 'fit-content' }}
                 >
                   {/* Horizontal gradient background */}
                   <div

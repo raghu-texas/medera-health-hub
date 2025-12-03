@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Home, Info, Package, Mail } from "lucide-react";
-import newLogo from "@/assets/OMS_Logo.png";
+import omsLogo from "@/assets/oms-logo1.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,8 +59,8 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80 ml-0.5">
-            <img src={newLogo} alt="OMS Logo" className="h-20 w-auto object-contain" />
+          <a href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80 mt-1.5 -ml-1 sm:-ml-3 lg:-ml-4">
+            <img src={omsLogo} alt="OnlineMedSys.com" className="h-12 sm:h-14 w-auto object-contain" />
           </a>
 
           {/* Desktop Navigation */}
