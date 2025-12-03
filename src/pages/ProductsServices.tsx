@@ -162,7 +162,7 @@ const ProductsServices = () => {
                   onMouseLeave={e => {
                     e.currentTarget.style.backgroundColor = '#0066b1';
                   }}
-                  onClick={() => service.isProcessChart && setIsDialogOpen(true)}
+                  onClick={() => setIsDialogOpen(true)}
                 >
                   <CardHeader>
                     <div className="h-14 w-14 rounded-xl bg-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
